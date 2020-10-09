@@ -27,7 +27,25 @@ const romanToInt = function(s) {
 
     let arrayNumerals = romanNumerals.split('');
 
-    console.log(arrayNumerals)
+    let total = 0;
+
+    for(let i = 0; i < arrayNumerals.length; i++)
+    {
+        if(arrayNumerals[i] === 'X')
+        {
+            total = total + 10;
+        }
+        if(arrayNumerals[i] === 'V')
+        {
+            total = total + 5
+        }
+        if(arrayNumerals[i] === 'I')
+        {
+            total = total + 1;
+        }
+    }
+
+    return total;
 }
 
 
