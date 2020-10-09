@@ -43,6 +43,10 @@ const romanToInt = function(s) {
         {
             total = total + 1;
         }
+        
+
+        // just need a bunch of test cases
+        // L, C, D, M and place I, V, X, and C before V, X, C, and M cases
     }
 
     return total;
