@@ -24,8 +24,11 @@ const romanToInt = function(s) {
     // gonna start my making sure I convert this to capital letters
 
     let romanNumerals = s.toUpperCase();
-    console.log(romanNumerals)
+
+    let arrayNumerals = romanNumerals.split('');
+
+    console.log(arrayNumerals)
 }
 
 
-//console.log(romanToInt('xvIII')) // output should be 18
+console.log(romanToInt('xvIII')) // output should be 18
