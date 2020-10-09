@@ -52,4 +52,4 @@ const isPalindrome = function(x) {
 
 }
 
-console.log(isPalindrome(-12))
+console.log(isPalindrome(900090009)) // true
