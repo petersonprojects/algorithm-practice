@@ -64,14 +64,34 @@ const romanToInt = function(s) {
         //subtraction cases
 
         // IV -- 4
-        if(arrayNumerals[i] === 'V' && arrayNumerals[i-1] === 'I' && arrayNumerals[i-1] !== undefined )
+        if(arrayNumerals[i-1] === 'I' && arrayNumerals[i] === 'V' && arrayNumerals[i-1] !== undefined )
         {
-            total = total -1;
+            total = total - 2;
         }
         // IX -- 9
-        if(arrayNumerals[i] === 'X' && arrayNumerals[i-1] === 'I' && arrayNumerals[i-1] !== undefined )
+        if(arrayNumerals[i-1] === 'I' && arrayNumerals[i] === 'X' && arrayNumerals[i-1] !== undefined )
         {
-            total = total -1;
+            total = total - 2;
+        }
+        // XL -- 40
+        if( arrayNumerals[i-1] === 'X' && arrayNumerals[i] === 'L' && arrayNumerals[i-1] !== undefined )
+        {
+            total = total - 20;
+        }
+        // XC - 90
+        if( arrayNumerals[i-1] === 'X' && arrayNumerals[i] === 'C' && arrayNumerals[i-1] !== undefined )
+        {
+            total = total - 20;
+        }
+        // CD - 400
+        if( arrayNumerals[i-1] === 'C' && arrayNumerals[i] === 'D' && arrayNumerals[i-1] !== undefined )
+        {
+            total = total - 200;
+        }
+        // CM - 900
+        if( arrayNumerals[i-1] === 'C' && arrayNumerals[i] === 'M' && arrayNumerals[i-1] !== undefined )
+        {
+            total = total - 200;
         }
 
         
@@ -84,4 +104,4 @@ const romanToInt = function(s) {
 }
 
 
-console.log(romanToInt('xvIII')) // output should be 18
+console.log(romanToInt('CMLIV')) // output should be 18
