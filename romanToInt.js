@@ -63,9 +63,20 @@ const romanToInt = function(s) {
 
         //subtraction cases
 
-        if(arrayNumerals[i] === 'X' && arrayNumerals[i-1] === 'I')
+        if(arrayNumerals[i] === 'X' && arrayNumerals[i-1] === 'I' && arrayNumerals[i-1])
         {
             total = total - 1;
+
+            if(arrayNumerals[i] === 'X' 
+
+                && arrayNumerals[i-1] === "I" 
+                && arrayNumerals[i-2] === "I" 
+
+                && arrayNumerals[i-1] 
+                && arrayNumerals[i-2])
+            {
+                total = total - 1;
+            }
         }
         
 
