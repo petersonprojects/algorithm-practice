@@ -1,7 +1,4 @@
 
-
-
-
 const findMedianSortedArrays = function(nums1, nums2) {
 
     let combinedArray = [...nums1, ...nums2].sort(function(a, b){return a-b});
