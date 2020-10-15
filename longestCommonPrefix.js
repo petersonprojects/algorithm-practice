@@ -5,31 +5,34 @@ const longestCommonPrefix = function(strs) {
     // the variable we are gonna push common prefixes to
     let result = "";
 
-    // the 2D array we are gonna push the array of letters to
-    let twoDeeArray = [];
-    
-    strs.forEach(item => {
+    if(strs.length > 0)
+    {
 
-        let array = item.split('');
-
-        twoDeeArray.push(array);
-
-        console.log(twoDeeArray)
-
-        for(let i = 0; i < array.length; i++)
+        if(strs[0][0] === strs[1][0] && strs[1][0] === strs[2][0])
         {
-            for(let j = [0]; j < twoDeeArray.length; j++)
+            result = result + strs[0][0]
+    
+            if(strs[0][1] === strs [1][1] && strs [1][1] === strs[2][1])
             {
-                if(twoDeeArray[i][j] === twoDeeArray[i+1][j])
+                result = result + strs[0][1]
+    
+                if(strs[0][2] === strs[1][2] &&  strs[1][2] === strs[2][2])
                 {
-                    result = result + twoDeeArray[i][j]
-                    console.log(result)
+                    result = result + strs[0][2]
+    
+                    if(strs[0][3] === strs[1][3] &&  strs[1][3] === strs[2][3])
+                    {
+                        result = result + strs[0][3]
+                    }
                 }
             }
         }
-    })
+
+    }
+
+
     
     return result;
 }
 
-console.log(longestCommonPrefix(["flower", "flow", "flight"]))
+console.log(longestCommonPrefix(["prefix", "preacher", "presaved"]))
