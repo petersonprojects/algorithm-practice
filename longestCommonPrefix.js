@@ -1,38 +1,31 @@
 
 
+// correct solution
+
 const longestCommonPrefix = function(strs) {
     
-    // the variable we are gonna push common prefixes to
-    let result = "";
-
-    if(strs.length > 0)
+    if (strs.length == 0)
     {
-
-        if(strs[0][0] === strs[1][0] && strs[1][0] === strs[2][0])
-        {
-            result = result + strs[0][0]
-    
-            if(strs[0][1] === strs [1][1] && strs [1][1] === strs[2][1])
-            {
-                result = result + strs[0][1]
-    
-                if(strs[0][2] === strs[1][2] &&  strs[1][2] === strs[2][2])
-                {
-                    result = result + strs[0][2]
-    
-                    if(strs[0][3] === strs[1][3] &&  strs[1][3] === strs[2][3])
-                    {
-                        result = result + strs[0][3]
-                    }
-                }
-            }
-        }
-
+        return "";
     }
-
-
     
-    return result;
+    let prefix = strs[0];
+    
+    for (let i = 1; i < strs.length; i++)
+    {
+        while (strs[i].indexOf(prefix) != 0)
+        {
+            prefix = prefix.substring(0, prefix.length - 1);
+
+            if(prefix.isEmpty)
+            {
+                return "";
+            }
+
+        }
+    }    
+
+    return prefix;
 }
 
 console.log(longestCommonPrefix(["prefix", "preacher", "presaved"]))
