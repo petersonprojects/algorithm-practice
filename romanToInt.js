@@ -21,7 +21,7 @@ Given a roman numeral, convert it to an integer.
 
 const romanToInt = function(s) {
     
-    // gonna start my making sure I convert this to capital letters
+    // gonna start by making sure I convert this to capital letters
 
     let romanNumerals = s.toUpperCase();
 
@@ -31,6 +31,22 @@ const romanToInt = function(s) {
 
     for(let i = 0; i < arrayNumerals.length; i++)
     {
+        if(arrayNumerals[i] === 'M')
+        {
+            total = total + 1000
+        }
+        if(arrayNumerals[i] === 'D')
+        {
+            total = total + 500
+        }
+        if(arrayNumerals[i] === 'C')
+        {
+            total = total + 100
+        }
+        if(arrayNumerals[i] === 'L')
+        {
+            total = total + 50
+        }
         if(arrayNumerals[i] === 'X')
         {
             total = total + 10;
