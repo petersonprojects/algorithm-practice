@@ -1,20 +1,25 @@
-var longestCommonPrefix = function(strs) {
+
+
+const longestCommonPrefix = function(strs) {
     
     let result = "";
+    let twoDeeArray = [];
     
-    for(let i = 0; i < strs.length; i++)
-    {
-        
-        for(let j = 0; j < strs[i].length; j++)
-            {
-                if(strs[i][j] === strs[i+1][j])
-                    {
-                        result = result + strs[i][j]
-                    }
-                
-            }
+    strs.forEach(item => {
 
-    }
+        let array = item.split('');
+        
+        twoDeeArray.push(array);
+
+        console.log(twoDeeArray)
+
+        // for(let i = 0; i < array.length; i++)
+        // {
+        //     if(array[i])
+        // }
+    })
     
     return result;
 }
+
+console.log(longestCommonPrefix(["flower", "flow", "flight"]))
