@@ -19,6 +19,8 @@ Given a roman numeral, convert it to an integer.
 
 */
 
+// O(n) linear space-time complexity (1 < s.length < 15)
+
 const romanToInt = function(s) {
     
     // gonna start by making sure I convert this to capital letters
@@ -93,15 +95,10 @@ const romanToInt = function(s) {
         {
             total = total - 200;
         }
-
-        
-
-        // just need a bunch of test cases
-        // L, C, D, M and place I, V, X, and C before V, X, C, and M cases
     }
 
     return total;
 }
 
 
-console.log(romanToInt('CMLIV')) // output should be 18
+romanToInt('MCMXCIV') // output is 1994
