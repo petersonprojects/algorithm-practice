@@ -3,31 +3,41 @@
 
 
 const findMedianSortedArrays = function(nums1, nums2) {
-    
-    let sortedFirst = nums1.sort();
-    let sortedSecond = nums2.sort();
 
-    let combinedArray = [...sortedFirst, ...sortedSecond];
-
+    let combinedArray = [...nums1, ...nums2].sort(function(a, b){return a-b});
 
     let median = 0;
+    let length = combinedArray.length;
 
+    console.log(combinedArray)
 
-    if((combinedArray.length % 2) === 0)
+    // if there's an even number of items in the array
+    if(length%2 === 0)
     {
-        let x = (combinedArray.length / 2)
-        let y = (combinedArray.length / 2) + 1
+        let firstIndex = (length / 2) - 1;
+        let secondIndex = (length / 2);
 
-        median = (combinedArray[x] + combinedArray[y]) / 2
+        median = (combinedArray[firstIndex] + combinedArray[secondIndex]) / 2
     }
-    else
+    // if theres an odd number of items in the array
+    else if(length%2 === 1)
     {
-        median = (combinedArray.length / 2)
+        let index = length/2;
+        let integer = index.toFixed(0)
+
+        console.log(`integer: ${integer}`)
+
+
+        let answer = (length - (integer))
+
+        console.log(`index of answer: ${answer}`)
+
+        median = combinedArray[answer]
     }
 
-    return combinedArray;
+    return median;
     
 }
 
 
-console.log(findMedianSortedArrays([1,2], [3,4]))
+console.log(findMedianSortedArrays([1,3,5,18,19], [2,4]))
