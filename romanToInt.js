@@ -61,8 +61,6 @@ const romanToInt = function(s) {
         {
             total = total + 1;
         }
-
-
         //subtraction cases
 
         // IV -- 4
