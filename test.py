@@ -11,3 +11,10 @@
                 
             # if(number % 2 == 1):
             #     print(f"{number} is an odd number.")
+            
+baseLength = int(input("Enter triangle base size: "))
+count = 1
+
+while (count <= baseLength):
+    print("*"*(count))
+    count += 1
