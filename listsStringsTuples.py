@@ -88,7 +88,7 @@
 
 ## Medium Probs
 
-## Multiply Vectors
+# Multiply Vectors
 
 # listOne = [2,4,5]
 # listTwo = [2,3,6]
@@ -180,37 +180,37 @@
 
 ## Caesar Cipher
 
-# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
-#             'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-#             'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
-#             'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
+            'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+            'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
+            'x', 'y', 'z']
 
-# shiftFactor = 13
+shiftFactor = 13
 
-# myString = "lbh zhfg hayrnea jung lbh unir yrnearq"
+myString = "lbh zhfg hayrnea jung lbh unir yrnearq"
 
-# lengthString = len(myString)
-# alphabetLength = len(alphabet)
+lengthString = len(myString)
+alphabetLength = len(alphabet)
 
-# cipher = ""
+cipher = ""
 
-# for x in range(lengthString):
+for x in range(lengthString):
     
-#     temp = myString[x]
+    temp = myString[x]
     
-#     if (temp == ' '):
-#         cipher = cipher + ' '
+    if (temp == ' '):
+        cipher = cipher + ' '
     
-#     for y in range(alphabetLength):
+    for y in range(alphabetLength):
         
-#         if(temp == alphabet[y]):
+        if(temp == alphabet[y]):
             
-#             if(y + shiftFactor > 25):
-#                 newIndex = ((y + shiftFactor) % 25) - 1
-#             else:
-#                 newIndex = y + shiftFactor
+            if(y + shiftFactor > 25):
+                newIndex = ((y + shiftFactor) % 25) - 1
+            else:
+                newIndex = y + shiftFactor
                 
-#             cipher = cipher + alphabet[newIndex]
+            cipher = cipher + alphabet[newIndex]
             
             
-# print(cipher)
+print(cipher)
