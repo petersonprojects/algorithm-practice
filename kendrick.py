@@ -19,15 +19,15 @@ def kendrick(lyric):
     elif(lyric == 'faded'):
         return "drank"
     else:
-        return "Oh no! That's not the lyric. Try again."
-    
+        return "Oh no! That's not the lyric. \n Run the file again!"
+
 status = ""
 points = 0
 answers_submitted = []
 
-while(status != "Oh no! That's not the lyric. Try again."):
+while(status != "Oh no! That's not the lyric. \n Run the file again!"):
     
-    userInput = input("Enter all the lyrics correctly to win: ")
+    userInput = input("Enter all the lyrics correctly to win: ").lower()
     
     status = kendrick(userInput)
     
@@ -41,6 +41,7 @@ while(status != "Oh no! That's not the lyric. Try again."):
         print("""
 
                 \n\n\n
+                
                 **********************************************
                 
                 Congratulations! You are a true Kendrick fan.

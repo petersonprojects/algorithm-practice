@@ -34,12 +34,12 @@
 
 # is_even
 
-def is_even(number):
+# def is_even(number):
 
-    if(number % 2 == 0):
-        return True
-    else:
-        return False
+#     if(number % 2 == 0):
+#         return True
+#     else:
+#         return False
     
     
 # print(is_even(103))
@@ -162,32 +162,44 @@ def is_even(number):
 # The location is invalid
 # The player String is something other than "X" or "Y"
 
-board_state =  [
+# board_state =  [
     
-                    (0,0),(0,1),(0,2),
-                    (1,0),(1,1),(1,2),
-                    (2,0),(2,1),(2,2)
+#                     (0,0),(0,1),(0,2),
+#                     (1,0),(1,1),(1,2),
+#                     (2,0),(2,1),(2,2)
                 
-                ]
+#                 ]
 
-def move(board_state, cell_to_move, player_string):
+# def move(board_state, cell_to_move, player_string):
 
-    if(len(board_state) != 9):
-        print("Board wrong size")
+#     if(len(board_state) != 9):
+#         print("Board wrong size")
     
-    else:
-        for x in range(len(board_state)):
-            if(board_state[x] == cell_to_move):
-                board_state[x] = player_string
+#     else:
+#         for x in range(len(board_state)):
+#             if(board_state[x] == cell_to_move):
+#                 board_state[x] = player_string
         
-    return board_state
+#     return board_state
 
 
 
 
 
-move(board_state, (0,0), "X")
-move(board_state, (0,1), "O")
-move(board_state, (0,1), "X")
+# move(board_state, (0,0), "X")
+# move(board_state, (0,1), "O")
+# move(board_state, (0,1), "X")
 
-print(board_state)
+# print(board_state)
+
+
+list1 = [0,1,2,3]
+list2 = [0,1,2,3]
+
+for item in list1:
+    print(item)
+    for value in list2:
+        if(value == 2):
+            break
+        print(value)
+
