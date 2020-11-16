@@ -193,13 +193,3 @@
 # print(board_state)
 
 
-list1 = [0,1,2,3]
-list2 = [0,1,2,3]
-
-for item in list1:
-    print(item)
-    for value in list2:
-        if(value == 2):
-            break
-        print(value)
-

@@ -28,8 +28,6 @@ module.exports = function sortCategoriesForInsert (inputJson) {
         }
 
     })
-
-    console.log(IDs)
     
     return properJSONOutput
 }
