@@ -19,3 +19,17 @@
 #     print("*"*(count))
 #     count += 1
 
+
+## reverse a string using recursion
+
+def revstr(a):
+    
+    if len(a) <= 1:
+        return a
+    
+    return revstr(a[1:]) + a[0]
+
+
+result = revstr("hi my name is soup")
+print(result)
+
