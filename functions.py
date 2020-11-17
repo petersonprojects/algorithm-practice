@@ -96,26 +96,64 @@
 
 
 
-# def smallest(numList):
-#     numList.sort()
-#     return numList[0]
 
-# numberList = [-2000, 5 , 10, -15000 , 20, 25, 30]
 
-# result = smallest(numberList)
 
-# print(f'Smallest number in the list is: {result}')
 
-# def largest(numList):
-#     numList.sort()
-#     length = len(numList)
-#     return numList[length-1]
 
-# numberList = [-2000, 5 , 10, -15000 , 20, 25, 30]
 
-# result = largest(numberList)
 
-# print(f'Largest number in the list is: {result}')
+def smallest(numList):
+    smallest = numList[0]
+    
+    for number in numList:
+        if(number < smallest):
+            smallest = number
+    # numList.sort()
+    # return numList[0]
+    return smallest
+
+numberList = [2000, 5 , 10, 15000 , 20, 25, 30]
+
+result = smallest(numberList)
+
+print(f'Smallest number in the list is: {result}')
+
+def largest(numList):
+    
+    largest = numList[0]
+    
+    for number in numList:
+        if(number > largest):
+            largest = number
+            
+    # numList.sort()
+    # return numList[length-1]
+    return largest
+
+numberList = [2000, 5 , 10, 15000 , 20, 25, 30]
+
+result2 = largest(numberList)
+
+print(f'Largest number in the list is: {result2}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # def shortest(stringList):
