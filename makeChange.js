@@ -6,7 +6,7 @@
 let calcCoins = (amount) => {
 
     let count = 0;
-    let coinTypes = [25, 10, 5, 1]
+    let coinTypes = [25, 10, 5, 1];
 
     while(amount > 0)
     {
@@ -35,7 +35,7 @@ let calcCoins = (amount) => {
         if((amount % coinTypes[2]) > 0)
         {
             count = count + (amount % coinTypes[2]);
-            amount = 0
+            amount = 0;
         }
     }
 
