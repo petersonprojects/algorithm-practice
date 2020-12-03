@@ -1,51 +1,45 @@
 
 
-// return the smallest number of coins used to make change for a cent value
+// return the smallest number of coins used to 
+// make change for a cent value
+
 let calcCoins = (amount) => {
-    
+
     let count = 0;
+    let coinTypes = [25, 10, 5, 1]
 
     while(amount > 0)
     {
-
         // quarters
-        if(amount / 25 >= 1)
+        if((amount / coinTypes[0]) >= 1)
         {
-            amount = amount - 25;
+            amount = amount - coinTypes[0];
             count++;
             continue;
         }
-
         // dimes
-        if(amount / 10 >= 1)
+        if((amount / coinTypes[1]) >= 1)
         {
-            amount = amount  - 10;
+            amount = amount - coinTypes[1];
             count++;
             continue;
         }
-
         // nickels
-        if(amount / 5 >= 1)
+        if((amount / coinTypes[2]) >= 1)
         {
-            amount = amount  - 5;
+            amount = amount - coinTypes[2];
             count++;
             continue;
         }
-
         // pennies
-        if(amount % 5 > 0)
+        if((amount % coinTypes[2]) > 0)
         {
-            count = count + (amount % 5)
+            count = count + (amount % coinTypes[2]);
             amount = 0
-        }
-        else
-        {
-            break;
         }
     }
 
     return count;
-
 }
 
 console.log(calcCoins(99));
