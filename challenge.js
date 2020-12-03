@@ -5,13 +5,15 @@
 
 // solutionBy(petersonprojects.github.io)
 
-module.exports = function sortCategoriesForInsert (inputJson) {
+module.exports = function sortCategoriesForInsert (jsonString) {
 
-    let properJSONOutput = []
+    let jsonObj = JSON.parse(jsonString)
+
+    let sortedJSON = []
 
     let IDs = []
 
-    inputJson.forEach(item => {
+    jsonObj.forEach(item => {
 
         let id = item.id
         let parent = item.parent_id
@@ -20,14 +22,17 @@ module.exports = function sortCategoriesForInsert (inputJson) {
 
         if(IDs.includes(parent))
         {
-            properJSONOutput.push(item)
+            sortedJSON.push(item)
         }
-        else if(!IDs.includes(parent))
+        else
         {
-            properJSONOutput.unshift(item)
+            sortedJSON.unshift(item)
         }
 
     })
+
+    let jString = JSON.stringify(sortedJSON)
     
-    return properJSONOutput
+    return jString
 }
+
